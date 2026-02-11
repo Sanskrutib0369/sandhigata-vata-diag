@@ -45,7 +45,217 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+<style>
+@media print {
+  /* Hide interactive elements */
+  button, input, textarea, select {
+    display: none !important;
+  }
+  
+  /* Basic page setup */
+  html, body {
+    background: white !important;
+    color: black !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 12pt;
+    line-height: 1.4;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  
+  /* Main container */
+  .max-w-5xl {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 20pt !important;
+    width: 100% !important;
+  }
+  
+  /* Card/container */
+  .bg-white {
+    background: white !important;
+    box-shadow: none !important;
+    border: 1pt solid black !important;
+    border-radius: 0 !important;
+  }
+  
+  /* Header */
+  .bg-ayur-600 {
+    background: #2d6e2d !important;
+    color: white !important;
+    padding: 15pt !important;
+    text-align: center !important;
+  }
+  
+  .bg-ayur-600 h1 {
+    font-size: 18pt !important;
+    margin-bottom: 5pt !important;
+  }
+  
+  .bg-ayur-600 .text-ayur-100 {
+    color: #e3f2e3 !important;
+    font-size: 10pt !important;
+  }
+  
+  /* Diagnosis section */
+  .bg-green-50, .bg-red-50 {
+    background: white !important;
+    border: 1pt solid black !important;
+    padding: 10pt !important;
+    margin: 10pt 0 !important;
+  }
+  
+  .text-green-800, .text-red-800 {
+    color: black !important;
+    font-size: 14pt !important;
+    font-weight: bold !important;
+  }
+  
+  .text-green-700, .text-red-700 {
+    color: black !important;
+    font-size: 11pt !important;
+  }
+  
+  /* Sections */
+  section {
+    margin-bottom: 20pt !important;
+    page-break-inside: avoid;
+  }
+  
+  section h2 {
+    font-size: 14pt !important;
+    font-weight: bold !important;
+    margin-bottom: 10pt !important;
+    border-bottom: 1pt solid black !important;
+    padding-bottom: 5pt !important;
+    color: black !important;
+  }
+  
+  section h3 {
+    font-size: 12pt !important;
+    font-weight: bold !important;
+    margin-bottom: 8pt !important;
+    color: black !important;
+  }
+  
+  /* Grid layouts */
+  .grid {
+    display: block !important;
+  }
+  
+  .grid-cols-1, .grid-cols-2, .grid-cols-3, .lg\:col-span-2 {
+    display: block !important;
+    width: 100% !important;
+  }
+  
+  /* Flex layouts */
+  .flex {
+    display: block !important;
+  }
+  
+  .flex-col, .flex-row, .justify-between, .items-center {
+    display: block !important;
+    text-align: left !important;
+  }
+  
+  /* Data rows */
+  .p-4, .p-6, .p-8 {
+    padding: 8pt !important;
+  }
+  
+  .mb-4, .mb-6, .mb-8 {
+    margin-bottom: 10pt !important;
+  }
+  
+  .gap-4, .gap-6 {
+    gap: 0 !important;
+  }
+  
+  /* Text colors */
+  .text-gray-800, .text-gray-700, .text-gray-600, .text-gray-500 {
+    color: black !important;
+  }
+  
+  .text-red-600, .text-red-700, .text-red-800 {
+    color: black !important;
+    font-weight: bold !important;
+  }
+  
+  .text-green-600, .text-green-700, .text-green-800 {
+    color: black !important;
+  }
+  
+  .text-ayur-600 {
+    color: black !important;
+  }
+  
+  /* Borders */
+  .border-gray-200, .border-green-200, .border-red-200 {
+    border-color: black !important;
+  }
+  
+  .border-b {
+    border-bottom: 1pt solid black !important;
+  }
+  
+  .border-t {
+    border-top: 1pt solid black !important;
+  }
+  
+  /* Backgrounds */
+  .bg-gray-50 {
+    background: white !important;
+  }
+  
+  .rounded-lg, .rounded-xl {
+    border-radius: 0 !important;
+  }
+  
+  .shadow-lg, .shadow-sm {
+    box-shadow: none !important;
+  }
+  
+  /* Typography */
+  .text-xs { font-size: 9pt !important; }
+  .text-sm { font-size: 10pt !important; }
+  .text-base { font-size: 12pt !important; }
+  .text-lg { font-size: 14pt !important; }
+  .text-xl { font-size: 16pt !important; }
+  .text-2xl { font-size: 18pt !important; }
+  .text-3xl { font-size: 20pt !important; }
+  
+  /* Images */
+  img {
+    max-width: 300pt !important;
+    height: auto !important;
+    border: 1pt solid black !important;
+  }
+  
+  /* Lists */
+  ul, ol {
+    margin: 10pt 0 !important;
+    padding-left: 20pt !important;
+  }
+  
+  li {
+    margin-bottom: 5pt !important;
+  }
+  
+  /* Page breaks */
+  @page {
+    margin: 20pt;
+  }
+  
+  /* Ensure content doesn't go to upper side */
+  * {
+    position: static !important;
+    float: none !important;
+  }
+}
+</style>
 </head>
   <body class="bg-gray-50 text-gray-800">
     <div id="root"></div>
